@@ -168,3 +168,20 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #8c0000; }
+
+/*********************************************
+ * Eye candy
+ *********************************************/
+.reveal .pink {
+  color: pink;
+}
+.reveal code {
+  color: brown;
+}
+.reveal pre {
+  font-size: .75em;
+}
+.reveal pre.small {
+  font-size: .55em;
+}
+

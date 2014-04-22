@@ -61,76 +61,514 @@
 				</section>
 
 				<section>
+					<h1>Welcome</h1>
+					<p>Thanks! Kianosh, NGP VAN, Cascaders!</p>
+					<img src="img/cascadebos.png">
+				</section>
 
-					<section>
-						<h1>Welcome</h1>
-					</section>
+				<section>
+					<h2>Little about me</h2>
+					<ul>
+						<li>Nerd.</li>
+						<li>Print designer since 1996.</li>
+						<li>Web designer since 2001.</li>
+						<li>Morphing into web developer ever since.</li>
+					</ul>
 
-
-					<section>
-						<h2><h2>
-							<ul>
-								
-							</ul>
-
-					</section>
-
-
-					<section>
-
-					</section>
+				</section>
 
 
+				<section>
+					<h4>Experience with vectors</h4>
+					<p>Remember <em>Macromedia Freehand</em> and <em>Macromedia Flash</em>? I do.</p>
+					<img src="img/freehand.jpg">
 				</section>
 
 
 
 				<section>
+					<h4>First off:</h4>
+					<h1>We <i class="fa-heart fa pink"></i> Responsive Web Design </h1>
 				</section>
+
+
 
 
 				<section>
+					<h2>Many devices, one website.</h2>
+
+					<p>But, </p>
+					<p><code>user-scalable=no</code> or <code>maximum-scale=1</code></p>
+					<p>do you use them anymore?</p>
 				</section>
+
 
 
 				<section>
+					<h1><strong>Problem</strong></h1> 
 				</section>
+
 
 
 				<section>
+
+					<h3><strong>1.</strong> A Pixel is Not A Pixel:</h3>
+
+					<blockquote>Why does the 640px &times; 960px iPhone 4 claim to be 320px &times; 480px in the browser? The truth is that there are two different definitions of pixels: they can be the smallest unit a screen can support (a hardware pixel) or a pixel can be based on an optically consistent unit called a “reference pixel.” </blockquote> 
+					<cite>&mdash; <a href="http://alistapart.com/article/a-pixel-identity-crisis/" target="_blank">A Pixel Identity Crisis</a> by Scott Kellum, January 17, 2012 on A List Apart</cite>
 				</section>
+
+				<section>
+					<img src="img/css-pixel.png">
+					<p>Illustration of “reference pixel” <br/>or what I like to call <strong>“CSS pixel”</strong></p>
+
+				</section>
+				<section>
+
+					<h3><strong>2.</strong> Increasingly more different pixel-density display devices</h3>
+
+					<p>I am not talking about just Apple “Retina” display </p>
+					<p><a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density" target="_blank">Wikipedia: List of displays by pixel density</a>
+
+				</section>
+				<section>
+					<img src="img/chromebook.png" alt="">
+					<p>Examples include <a href="https://www.google.com/intl/en/chrome/devices/chromebook-pixel/
+					" target="_blank">Google Chromebook Pixel</a><br>(and that was already over a year ago!):
+
+				</section>
+				<section>
+					<img src="img/phones.jpg" alt="">
+					<ul>
+						<li>Samsung GalaxyS5  <strong>432 PPI</strong> </li>
+						<li>Sony Xperia Z <strong>441 PPI</strong></li>
+						<li>HTC One <strong>468 PPI</strong></li>
+					</ul>
+					<p>(Those devices report as CSS Pixel Ratio of 3)</p>
+
+				</section>
+				<section>
+						<img src="img/high.jpg" alt="">
+
+				</section>
+				<section>
+
+					<h3><strong>3.</strong> Remember @2x images?</h3>
+					<img src="img/at2x.png" alt="">
+					<p>Don’t get me started…</p>
+					<a href="https://developer.apple.com/high-resolution/
+					" target="_new">Apple's Developer Guide</a>
+				</section>
+				<section>
+
+					<h1>Solutions</h1>
+					<p>(Well, some of many solutions)</p>
+
+				</section>
+				<section>
+
+					<h2><strong>Vector</strong> to the rescue</h2>
+					<img src="img/github.svg" alt="" style="width:600px">
+				</section>
+				<section>
+
+
+					<h3>Method 1</h3>
+					<h1>web fonts</h1>
+
+
+				</section>
+				<section>
+
+					<ul>
+						<li>
+						<strong>Pros:</strong> 
+							<ul><li>Pretty!</li>
+							<li>Easy!</li>
+							<li>Widely Supported!</li></ul>
+						</li>
+						<li>
+						<strong>Cons:</strong>
+							<ul><li>File size/Performance</li>
+							<li>License issues?</li></ul>
+						</li>
+					</ul>
+
+
+				</section>
+				<section>
+
+
+					<h3>What is the browser support?</h3>
+
+					<p>TL;DR: <a href="
+					http://caniuse.com/#feat=fontface" target="_blank">Pretty good.</a></p>
+					<img src="img/caniuse-font-face.png" alt="">
+
+				</section>
+				<section>
+
+
+					<h4>Caveat</h4>
+					<p>Support for <a href="
+					http://caniuse.com/#feat=fontface" target="_blank">Web Open Font Format (WOFF)</a></p>
+					<img src="img/caniuse-woff.png" alt="">	
+
+
+				</section>
+				<section>
+
+
+<h2>@font-face syntax</h2>
+
+<code><pre>
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff') format('woff'), /* Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+</pre></code>
+&mdash; From <a href="http://css-tricks.com/snippets/css/using-font-face/">Chris Coyer</a> of css-tricks
+
+
+				</section>
+				<section>
+
+
+				<p>We do have to include multiple font formats, specifically </p>
+				<ul>
+					<li><strong>EOT</strong> for IE 8,</li>
+					<li><strong>TTF</strong> for Chrome &lt; 5, Firefox &lt; 3.5, Opera &lt; 10, Safari &lt; 5 
+					and </li>
+					<li><strong>SVG fonts</strong> for &lt; iOS 5 </li>
+				</ul>
+
+
+				</section>
+				<section>
+
+
+				<h2>Only supporting modern browsers?</h2>
+
+<code><pre>@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.woff') format('woff');
+}</pre></code>
+
+				<p>Nice.</p>
+				</section>
+				<section>
+
+
+
+
+					<h3>Service for converting to web font formats:</h3>
+
+					<ul>
+						<li><a href="http://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Font Squirrel Web Font generator</a></li>
+						<li><a href="http://www.font2web.com/" target="_blank">Font 2 Web</a></li>
+						<li><a href="http://www.freefontconverter.com/" target="_blank">Free Font Converter</a></li>
+					</ul>
+
+					<p>Upload .otf or .ttf, get different formats.</p>
+
+				</section>
+				<section>
+					<h3>Way to define <a href="http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/">font weight and font style in one font</a></h3>
+
+				<code><pre class="small">@font-face {
+    font-family: 'myfont';
+    src: url('myfont-Regular-webfont.woff') format('woff');
+    font-weight: normal; font-style: normal;
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('myfont-Italic-webfont.woff') format('woff');
+    font-weight: normal; font-style: italic;
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('myfont-Bold-webfont.woff') format('woff');
+    font-weight: bold; font-style: normal;
+}
+@font-face {
+    font-family: 'myfont';
+    src: url('myfont-BoldItalic-webfont.woff') format('woff');
+    font-weight: bold; font-style: italic;
+}</pre></code>
+
+
+
+
+				</section>
+				<section>
+					<h2>Font services and hosts</h2>
+					<ul>
+						<li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
+						<li><a href="https://typekit.com/" target="_blank">Adobe Type Kit</a> and <a href="https://edgewebfonts.adobe.com/">Edge Web Fonts</a></li>
+						<li><a href="http://www.typography.com/" target="_blank">Hoefler &amp; Frere-Jones</a></li>
+						<li><a href="http://www.webtype.com/" target="_blank">WebType</a></li>
+					</ul>
+					<p>and others.</p>
+
+
+
+
+
+				</section>
+				<section>
+
+
+
+
+					<h3>Method 2</h3>
+					<h1>font icons</h1>
+
+				</section>
+				<section>
+
+					<img src="img/github-octicon.png" alt="">
+					<p>Image from <a href="https://github.com/blog/1106-say-hello-to-octicons">github’s Octicons</a></p>
+
+				</section>
+				<section>
+
+
+					<ul>
+						<li>
+						<strong>Pros:</strong> 
+							<ul><li>Just fonts (The same @font-face)</li>
+							<li>Use it at any size</li>
+							<li>Use CSS effects </li></ul>
+						</li>
+						<li>
+						<strong>Cons:</strong>
+							<ul><li>Monochrome (Can’t use more than one color)</li>
+							<li>Performance? (Font Awesome woff is 44kb, but svg is 202kb)</li></ul>
+						</li>
+					</ul>
+
+
+
+
+				</section>
+				<section>
+
+
+<h2>Meet <a href="http://fontawesome.io/" target="_blank">Font Awesome</a></h2>
+<img src="img/font-awesome.png" alt="">
+
+				</section>
+				<section>
+
+					<h3>It is pretty darn Awesome.</h3>
+
+					<ul><li>MIT like licence, OK for commercial use (<a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font Licence</a>)</li>
+					<li>Flexible setup using SASS/LESS -- and everything is in variables</li>
+					<li>Sizes, lists, stackable</li>
+					<li>Use any css effects on them</li>
+					</ul>
+				</section>
+				<section>
+
+
+
+					<h1><a href="http://codepen.io/daigofuji/pen/FoLay">Demo</a></h1> 
+					<p>http://cdpn.io/FoLay</p>
+					<!--
+					Sizes:
+					fa-lg,  fa-2x  to fa-5x
+					Fixed width:
+						fa-fw
+					List:
+					<ul class="fa-ul">
+						<li><a href="#"><i class="fa-li fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="#"><i class="fa-li fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="#"><i class="fa-li fa fa-linkedin"></i> LinkedIn</a></li>
+						<li><a href="#"><i class="fa-li fa fa-google-plus"></i> Google+</a></li>
+					</ul>
+					Spinning:
+						fa-spin
+					Stack: 
+					<span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x"></i>
+					  <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+					</span>
+						-->
+
+
+					<p>Those are <a href="http://fontawesome.io/examples/">all in the docs</a></p>
+
+
+				</section>
+				<section>
+
+
+
+					<h2>Other awesome icon fonts resources</h2>
+					<ul>
+						<li><a href="http://css-tricks.com/flat-icons-icon-fonts/
+					" target="_blank">CSS-Tricks' Chris Coyer’s big list</a></li>
+						<li><a href="http://weloveiconfonts.com/" target="_blank">We love icon fonts</a></li>
+						<li><a href="http://icomoon.io/" target="_blank">icoMoon
+					</a> (more on this later)</li>
+					</ul>
+
+
+
+				</section>
+				<section>
+
+
+
+					<h1>Roll your own icon fonts</h1>
+
+				</section>
+				<section>
+
+					<h2><a href="http://www.glyphsapp.com/">Glyphs</a></h2>
+					<img src="img/glyphs.jpg" alt="">
+					<p>Can edit .otf format fonts</p>
+				</section>
+				<section>
+					<h3>Workflow:</h3>
+					<ol>
+						<li>Design icon in photoshop or illustrator (Working with Design Department)</li>
+						<li>Position it in 2048x2048 document in illustrator</li>
+						<li>Paste it into Glyphs</li>
+						<li>Export as .otf</li>
+						<li>use service like <a href="http://www.fontsquirrel.com/tools/webfont-generator">font squirrel</a> to generate WOFF, EOT, TTF and SVG </li>
+					</ol>
+
+
+					<p>Great post by github engineering team <a href="https://github.com/blog/1135-the-making-of-octicons
+					" target="_blank">on how they created Octicon</a>.
+
+
+				</section>
+				<section>
+
+					<h3>Proof of concept</h3>
+
+					<p>I created a font called <a href="http://daigofuji.github.io/bbclub-font/" target="_blank">BB Club Font</a> for a hackathon</p>
+
+					<img src="img/bbclub.png" alt="">
+
+					<p><a href="">demo</a></p>
+				</section>
+				<section>
+
+
+					<h4>Alternatively</h4>
+					<p>Use apps like 
+					<strong><a href="http://fontello.com/">Fontello</a></strong> </p>
+
+					<p>or</p> 
+					<p><strong><a href="http://icomoon.io/">IcoMoon</a></strong></p> 
+					<img src="img/icomoon.png" alt="">
+
+					<p>Doc on <a href="http://icomoon.io/#docs/importing">how to import</a></p>
+
+
+
+				</section>
+				<section>
+
+					<h3>Method 3</h3>
+					<h1>SVG</h1>
+				</section>
+				<section>
+
+
+					<h2>Scalable Vector Graphics</h2>
+					<p>XML-based vector image format -- open standards, spec’ed by W3C</p>
+
+				</section>
+				<section>
+					<ul>
+						<li>
+						<strong>Pros:</strong> 
+							<ul><li>Open Standards</li>
+							<li>Multi-Colors</li>
+							<li>No Cross Origin issues</li></ul>
+						</li>
+						<li>
+						<strong>Cons:</strong>
+							<ul><li>File size/Performance</li>
+							<li>No IE8 (but otherwise very well supported.)
+</li></ul>
+						</li>
+					</ul>
+
+				</section>
+				<section>
+
+					<h3>Support</h3>
+					<img src="img/svg.png" alt="">
+					<p>For IE8, use polyfills like <a href="https://code.google.com/p/svgweb/">SVGWeb</a></p>
+
+				</section>
+				<section>
+					<h2>Awesome Resources</h2>
+					<ul>
+						<li><a href="http://iconmonstr.com/" target="_blank">IconMonstr</a></li>
+						<li><a href="http://raphaeljs.com/icons/" target="_blank">Raphael Icons</a></li>
+						<li><a href="http://thenounproject.com/" target="_blank">NounProject</a></li>
+					</ul>
+
+				</section>
+				<section>
+
+
+
+
+
+
+
+
+
+SVG at a data URI for background images.
+
+SVG Sprite!
+
+
+
+
+
+
+
+				</section>
+
+
+
+
+
+
+
+
+
+
 
 
 				<section>
+					Questions?
+Thoughts?
+Open Discussion.
+
 				</section>
+
+
+
 
 
 				<section>
+					<h1>Thanks!</h1>
+					<p>daigo@daigofujiwara.com</p>
+					<p>@DaigoFuji</p>
 				</section>
-
-
-				<section>
-				</section>
-
-
-				<section>
-				</section>
-
-
-				<section>
-				</section>
-
-
-				<section>
-				</section>
-
-
-				<section>
-				</section>
-
-
-
-
 
 
 
