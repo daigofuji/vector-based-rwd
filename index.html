@@ -219,7 +219,20 @@
 				<section>
 
 
-<h2>@font-face syntax</h2>
+
+				<p>We do have to include multiple font formats, specifically </p>
+				<ul>
+					<li><strong>EOT</strong> for IE 8,</li>
+					<li><strong>TTF</strong> for Chrome &lt; 5, Firefox &lt; 3.5, Opera &lt; 10, Safari &lt; 5 
+					and </li>
+					<li><strong>SVG fonts</strong> for &lt; iOS 5 </li>
+				</ul>
+
+
+				</section>
+				<section>
+
+				<h2>@font-face syntax</h2>
 
 <code><pre>
 @font-face {
@@ -231,20 +244,7 @@
        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 </pre></code>
-&mdash; From <a href="http://css-tricks.com/snippets/css/using-font-face/">Chris Coyer</a> of css-tricks
-
-
-				</section>
-				<section>
-
-
-				<p>We do have to include multiple font formats, specifically </p>
-				<ul>
-					<li><strong>EOT</strong> for IE 8,</li>
-					<li><strong>TTF</strong> for Chrome &lt; 5, Firefox &lt; 3.5, Opera &lt; 10, Safari &lt; 5 
-					and </li>
-					<li><strong>SVG fonts</strong> for &lt; iOS 5 </li>
-				</ul>
+				<p>&mdash; From <a href="http://css-tricks.com/snippets/css/using-font-face/">Chris Coyer</a> of css-tricks</p>
 
 
 				</section>
@@ -265,7 +265,7 @@
 
 
 
-					<h3>Service for converting to web font formats:</h3>
+					<h3>Web-based services for converting to web font formats:</h3>
 
 					<ul>
 						<li><a href="http://www.fontsquirrel.com/tools/webfont-generator" target="_blank">Font Squirrel Web Font generator</a></li>
@@ -273,7 +273,7 @@
 						<li><a href="http://www.freefontconverter.com/" target="_blank">Free Font Converter</a></li>
 					</ul>
 
-					<p>Upload .otf or .ttf, get different formats.</p>
+					<p>Upload <strong>.otf</strong> or <strong>.ttf</strong>, get different formats.</p>
 
 				</section>
 				<section>
@@ -305,23 +305,17 @@
 
 				</section>
 				<section>
-					<h2>Font services and hosts</h2>
+					<h2>Some font services and hosts</h2>
 					<ul>
 						<li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
 						<li><a href="https://typekit.com/" target="_blank">Adobe Type Kit</a> and <a href="https://edgewebfonts.adobe.com/">Edge Web Fonts</a></li>
 						<li><a href="http://www.typography.com/" target="_blank">Hoefler &amp; Frere-Jones</a></li>
 						<li><a href="http://www.webtype.com/" target="_blank">WebType</a></li>
 					</ul>
-					<p>and others.</p>
-
-
-
-
+					<p>and <a href="http://www.smashingmagazine.com/2010/10/20/review-of-popular-web-font-embedding-services/">a lot more...</a></p>
 
 				</section>
 				<section>
-
-
 
 
 					<h3>Method 2</h3>
@@ -457,22 +451,30 @@
 
 					<img src="img/bbclub.png" alt="">
 
-					<p><a href="">demo</a></p>
+					<p><a href="http://codepen.io/daigofuji/yfdEw" target="_blank">demo</a></p>
 				</section>
 				<section>
 
 
 					<h4>Alternatively</h4>
 					<p>Use apps like 
-					<strong><a href="http://fontello.com/">Fontello</a></strong> </p>
+					<strong><a href="http://fontello.com/" target="_blank">Fontello</a></strong> </p>
 
 					<p>or</p> 
-					<p><strong><a href="http://icomoon.io/">IcoMoon</a></strong></p> 
+					<p><strong><a href="http://icomoon.io/" target="_blank">IcoMoon</a></strong></p> 
 					<img src="img/icomoon.png" alt="">
 
-					<p>Doc on <a href="http://icomoon.io/#docs/importing">how to import</a></p>
+					<p>Doc on <a href="http://icomoon.io/#docs/importing" target="_blank">how to import</a></p>
 
 
+
+				</section>
+				<section>
+
+					<h2>SASS Mixin by Dale Sande</h2>
+					<p>An <a href="https://gist.github.com/blackfalcon/4731881">excellent write up</a> by Dale Sande, on how to organize.manage custom icon fonts.</p> 
+					<p>He has written <a href"https://github.com/anotheruiguy/sass-icon-fonts">Sass icon fonts mixin</a>, which is available via bower.</p>
+					<p>Link to his <a href="http://sassmeister.com/gist/8926475">SassMeister Demo</a></p>
 
 				</section>
 				<section>
@@ -508,7 +510,7 @@
 
 					<h3>Support</h3>
 					<img src="img/svg.png" alt="">
-					<p>For IE8, use polyfills like <a href="https://code.google.com/p/svgweb/">SVGWeb</a></p>
+					<p>For IE8, use polyfills like <a href="https://code.google.com/p/svgweb/">SVGWeb</a>, or try <a href="http://css-tricks.com/svg-fallbacks/">simple fallbacks</a></p>
 
 				</section>
 				<section>
@@ -524,15 +526,18 @@
 
 
 
+					<h3><a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">SVG Sprite</a></h3>
+					<p>Chris Coyer from css-tricks has written <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">an awesome article on how to do this</a>.</p>
+					<p>Basically, load the combined svg (he used grunt to combine multiple files into one) up front, then use 
+					<code>&lt;svg viewBox=&quot;0 0 100 100&quot; class=&quot;iconclass&quot;&gt;&lt;use xlink:href=&quot;#id&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code> anywhere in the code. You can use class to change svg properties like fills, strokes etc.</p>
 
 
 
 
+				</section>
+				<section>
 
-
-SVG at a data URI for background images.
-
-SVG Sprite!
+				<h3>SVG at a data URI for background images.</h3>
 
 
 
@@ -554,9 +559,9 @@ SVG Sprite!
 
 
 				<section>
-					Questions?
-Thoughts?
-Open Discussion.
+					<h2>Questions?<br>
+					Thoughts?</h2>
+					<p>Open Discussion.</p>
 
 				</section>
 
