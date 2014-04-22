@@ -184,4 +184,6 @@ body {
 .reveal pre.small {
   font-size: .55em;
 }
-
+.reveal .img-svg-logo {
+  width: 30%;
+}
