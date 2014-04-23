@@ -6,7 +6,7 @@
 
 		<title>Embedded web fonts, Icon fonts and SVG: Vector-based RWD using CSS</title>
 
-		<meta name="description" content="Slides from April 22, 2014 Cascade Bos meetup talk titled: Embedded web fonts, Icon fonts and SVG: Vector-based RWD using CSS">
+		<meta name="description" content="Slides from April 22, 2014 Cascade Bos meetup talk titled: Embedded web fonts, Icon fonts and SVG - Vector-based RWD using CSS">
 		<meta name="author" content="Daigo Fujiwara">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,21 +58,23 @@
 					<p>
 						<small>By Daigo Fujiwara <a href="http://github.com/daigofuji"><i class="fa fa-github-square"></i>daigofuji</a></small>
 					</p>
+					<p><small>Use the <i class="fa fa-toggle-left"></i> <i class="fa fa-toggle-right"></i> arrow keys to navigate.</small></p>
 				</section>
 
 				<section>
 					<h1>Welcome</h1>
-					<p>Thanks! Kianosh, NGP VAN, Cascaders!</p>
+					<p>Thanks! Kianosh, <a href="http://www.ngpvan.com/">NGP VAN</a>, Cascaders!</p>
 					<img src="img/cascadebos.png">
 				</section>
 
 				<section>
 					<h2>Little about me</h2>
 					<ul>
-						<li>Nerd.</li>
+						<li>Daigo Fujiwara</li>
 						<li>Print designer since 1996.</li>
 						<li>Web designer since 2001.</li>
 						<li>Morphing into web developer ever since.</li>
+						<li>Developer for <a href="http://hbr.org">Harvard Business Review</a></li>
 					</ul>
 
 				</section>
@@ -100,12 +102,13 @@
 					<p>But, </p>
 					<p><code>user-scalable=no</code> or <code>maximum-scale=1</code></p>
 					<p>do you use them anymore?</p>
+					<p>(You probably let them zoom.)</p>
 				</section>
 
 
 
 				<section>
-					<h1><strong>Problem</strong></h1> 
+					<h1>Problem</h1> 
 				</section>
 
 
@@ -169,10 +172,15 @@
 
 					<h2><strong>Vector</strong> to the rescue</h2>
 					<img src="img/github.svg" alt="" style="width:600px">
+					<p><small>From </small></p>
 				</section>
 				<section>
+					<h2>Vector</h2>
+					<blockquote>Vector graphics is the use of geometrical primitives such as points, lines, curves, and shapes or polygons&emdash;all of which are based on mathematical expressions &emdash; to represent images in computer graphics.</blockquote>
+					<p>From <a href="http://en.wikipedia.org/wiki/Vector_graphics">Wikipedia</a></p>
 
-
+				</section>
+				<section>
 					<h3>Method 1</h3>
 					<h1>web fonts</h1>
 
@@ -341,7 +349,8 @@
 						<li>
 						<strong>Cons:</strong>
 							<ul><li>Monochrome (Can’t use more than one color)</li>
-							<li>Performance? (Font Awesome woff is 44kb, but svg is 202kb)</li></ul>
+							<li>Performance?</li>
+							<li>Cross-Origin issue</li></ul>
 						</li>
 					</ul>
 
@@ -360,7 +369,7 @@
 
 					<h3>It is pretty darn Awesome.</h3>
 
-					<ul><li>MIT like licence, OK for commercial use (<a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font Licence</a>)</li>
+					<ul><li>MIT like license, OK for commercial use (<a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">Open Font License</a>)</li>
 					<li>Flexible setup using SASS/LESS -- and everything is in variables</li>
 					<li>Sizes, lists, stackable</li>
 					<li>Use any css effects on them</li>
@@ -429,9 +438,9 @@
 					<p>Can edit .otf format fonts</p>
 				</section>
 				<section>
-					<h3>Workflow:</h3>
+					<h3>Work flow:</h3>
 					<ol>
-						<li>Design icon in photoshop or illustrator (Working with Design Department)</li>
+						<li>Design icon in photoshop or illustrator</li>
 						<li>Position it in 2048x2048 document in illustrator</li>
 						<li>Paste it into Glyphs</li>
 						<li>Export as .otf</li>
@@ -573,7 +582,7 @@
 
 
 					<h3>SVG with fluid layout</h3>
-					<p>SVG can be contained within a containing box like <a href="http://soqr.fr/testsvg/embed-svg-liquid-layout-responsive-web-design.php" target="_blank">this</a>, much like video elements, to keep propotions. You can also put <a href="http://soqr.fr/testsvg/" target="_blank">media query right inside the SVG.</a>.</p>
+					<p>SVG can be contained within a containing box like <a href="http://soqr.fr/testsvg/embed-svg-liquid-layout-responsive-web-design.php" target="_blank">this</a>, much like video elements, to keep proportions. You can also put <a href="http://soqr.fr/testsvg/" target="_blank">media query right inside the SVG.</a>.</p>
 
 
 				</section>
@@ -594,9 +603,14 @@
 						<h3>Seen <a href="http://www.grumpicon.com/" target="_blank">Grumpicon</a>?</h3>
 						<img src="img/grumpicon.png" alt="">
 						<p>Convert any vector into web ready css/svg.</p>
-
 				</section>
 
+				<section>
+						<h3>Late addition!</h3>
+						<p>As I was giving the talk, Kianosh pointed out that Chris Coyer of CSS-Tricks have published an blog post titled: <a href="http://css-tricks.com/icon-fonts-vs-svg/">Inline SVG vs Icon Fonts [CAGEMATCH]</a>. His conclusion: </p>
+						<blockquote>If you can go IE 9+ / Android 3+, inline SVG is better at pretty much everything than icon fonts. If you need the deeper browser support, I feel like an inline SVG fallback would be too big of a pain to be worth it.</blockquote>
+						<p>Definitely worth a read if you are interested in this topic.</p>
+				</section>
 
 				<section>
 					<h2>Questions?<br>
@@ -612,7 +626,7 @@
 				<section>
 					<h1>Thanks!</h1>
 					<p>daigo@daigofujiwara.com</p>
-					<p>@DaigoFuji</p>
+					<p>@DaigoFuji on <a href="https://twitter.com/daigofuji">twitter</a>/<a href="https://github.com/daigofuji">github</a></p>
 				</section>
 
 
