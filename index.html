@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Embedded web fonts, Icon fonts and SVG: Vector-based RWD using CSS</title>
+		<title>Embedded web fonts, Icon fonts and SVG: Vector-based Responsive Web Design using CSS</title>
 
-		<meta name="description" content="Slides from April 22, 2014 Cascade Bos meetup talk titled: Embedded web fonts, Icon fonts and SVG - Vector-based RWD using CSS">
+		<meta name="description" content="Slides from April 22, 2014 Cascade Bos meetup talk titled: Embedded web fonts, Icon fonts and SVG - Vector-based Responsive Web Design using CSS">
 		<meta name="author" content="Daigo Fujiwara">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -26,6 +26,13 @@
 		<!-- FOnt Awesome -->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+		<!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
+		============================== -->
+		<meta property="og:title" content="Embedded web fonts, Icon fonts and SVG: Vector-based Responsive Web Design using CSS"/>
+		<meta property="og:site_name" content="Daigo Fujiwara's GitHub Pages"/>
+		<meta property="og:url" content="http://daigofuji.github.io/vector-based-rwd/"/>
+		<meta property="og:description" content="Slides from April 22, 2014 Cascade Bos meetup talk titled: Embedded web fonts, Icon fonts and SVG"/>
+		<meta property="og:image" content="http://daigofuji.github.io/vector-based-rwd/img/presentation.png"/>
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -53,7 +60,7 @@
 
 
 				<section>
-					<h2>Embedded web fonts, Icon fonts and SVG: <strong>Vector-based RWD using CSS</strong></h2>
+					<h2>Embedded web fonts, Icon fonts and SVG: <strong>Vector-based Responsive Web Design using CSS</strong></h2>
 					<h4><a href="http://www.meetup.com/cascadebos/events/177271382/">CASCADE BOS</a> Tuesday, April 22, 2014</h4>
 					<p>
 						<small>By Daigo Fujiwara <a href="http://github.com/daigofuji"><i class="fa fa-github-square"></i>daigofuji</a></small>
@@ -171,12 +178,14 @@
 				<section>
 
 					<h2><strong>Vector</strong> to the rescue</h2>
+					<p><small>(SVG from <a href="http://raphaeljs.com/icons/">RaphaelJS icons</a>)</small></p>
 					<img src="img/github.svg" alt="" style="width:600px">
-					<p><small>From <a href="http://raphaeljs.com/icons/">RaphaelJS icons</a></small></p>
+					
+
 				</section>
 				<section>
 					<h2>Vector</h2>
-					<blockquote>Vector graphics is the use of geometrical primitives such as points, lines, curves, and shapes or polygons&emdash;all of which are based on mathematical expressions &emdash; to represent images in computer graphics.</blockquote>
+					<blockquote>Vector graphics is the use of geometrical primitives such as points, lines, curves, and shapes or polygons&mdash;all of which are based on mathematical expressions&mdash;to represent images in computer graphics.</blockquote>
 					<p><small>From <a href="http://en.wikipedia.org/wiki/Vector_graphics">Wikipedia</small></a></p>
 
 				</section>
@@ -281,7 +290,7 @@
 						<li><a href="http://www.freefontconverter.com/" target="_blank">Free Font Converter</a></li>
 					</ul>
 
-					<p>Upload <strong>.otf</strong> or <strong>.ttf</strong>, get different formats.</p>
+					<p>Upload <strong>.otf</strong> or <strong>.ttf</strong>, get different formats. (Please make sure you have an appropriate license!)</p>
 
 				</section>
 				<section>
@@ -607,9 +616,9 @@
 
 				<section>
 						<h3>Late addition!</h3>
-						<p>As I was giving the talk, Kianosh pointed out that Chris Coyer of CSS-Tricks have published an blog post titled: <a href="http://css-tricks.com/icon-fonts-vs-svg/">Inline SVG vs Icon Fonts [CAGEMATCH]</a>. His conclusion: </p>
+						<p>As I was giving the talk, Kianosh pointed out that Chris Coyer of CSS-Tricks have *just* published a blog post titled: <a href="http://css-tricks.com/icon-fonts-vs-svg/">Inline SVG vs Icon Fonts [CAGEMATCH]</a>. His conclusion: </p>
 						<blockquote>If you can go IE 9+ / Android 3+, inline SVG is better at pretty much everything than icon fonts. If you need the deeper browser support, I feel like an inline SVG fallback would be too big of a pain to be worth it.</blockquote>
-						<p>Definitely worth a read if you are interested in this topic.</p>
+						<p>Definitely <a href="http://css-tricks.com/icon-fonts-vs-svg/">worth a read</a> if you are interested in this topic.</p>
 				</section>
 
 				<section>
